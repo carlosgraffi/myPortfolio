@@ -16,7 +16,7 @@ export default function Topbar() {
       className="w-full bg-background border-b border-white/10"
       role="banner"
     >
-      <div className="container px-4 py-3 flex items-center">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between max-w-6xl">
         <Link 
           href="/"
           className="font-tostada text-2xl hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg px-2"
@@ -29,7 +29,7 @@ export default function Topbar() {
           </h1>
         </Link>
         
-        <div className="ml-auto flex items-center gap-4">
+        <div className="flex items-center gap-4">
           <a
             href="/projects"
             className="hover:text-white hover:underline transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 rounded"
