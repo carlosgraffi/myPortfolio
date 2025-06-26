@@ -1,122 +1,73 @@
+'use client';
 
-"use client";
-
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-
-const navigationItems = [
-  { name: "About", href: "#about", id: "about" },
-  { name: "Projects", href: "#projects", id: "projects" },
-  { name: "Contact", href: "#contact", id: "contact" },
-];
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Topbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: prefersReducedMotion ? 'auto' : 'smooth'
-      });
-    }
-    setIsMenuOpen(false);
+  const handleLightThemeClick = () => {
+    setShowTooltip(true);
+    setTimeout(() => setShowTooltip(false), 5000);
   };
 
   return (
-    <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+    <header 
+      className="w-full bg-background border-b border-white/10"
+      role="banner"
     >
-      <div className="mx-4 md:mx-8 lg:mx-[8rem] py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <motion.a
-            href="/"
-            className="text-xl font-thunder text-white hover:text-gray-300 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+      <div className="container px-4 py-3 flex items-center">
+        <Link 
+          href="/"
+          className="font-tostada text-2xl hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg px-2"
+          aria-label="rediseñar - Ir al inicio"
+        >
+          <h1>
+            <span className="text-lg uppercase font-thunder tracking-normal">
+              CarlosOGraffi
+            </span>
+          </h1>
+        </Link>
+        
+        <div className="ml-auto flex items-center gap-4">
+          <a
+            href="/projects"
+            className="hover:text-white hover:underline transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 rounded"
+            aria-label="View projects"
           >
-            Carlos Graffi
-          </motion.a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <motion.button
-                key={item.name}
-                onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-white transition-colors font-medium"
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
-              >
-                {item.name}
-              </motion.button>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <motion.button
-            className="md:hidden text-white p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
-        </div>
-
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              className="md:hidden mt-4 py-4 border-t border-gray-700"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+            Projects
+          </a>
+          
+          <div className="relative">
+            <button
+              onClick={handleLightThemeClick}
+              className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+              aria-label="Toggle light theme"
             >
-              <div className="flex flex-col space-y-4">
-                {navigationItems.map((item, index) => (
-                  <motion.button
-                    key={item.name}
-                    onClick={() => scrollToSection(item.id)}
-                    className="text-gray-300 hover:text-white transition-colors font-medium text-left"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    {item.name}
-                  </motion.button>
-                ))}
+              <svg 
+                className="w-5 h-5" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" 
+                />
+              </svg>
+            </button>
+            
+            {showTooltip && (
+              <div className="absolute top-full right-0 mt-2 w-64 bg-black text-white p-3 rounded-lg shadow-lg text-sm z-50">
+                <div className="absolute -top-1 right-4 w-2 h-2 bg-white transform rotate-45"></div>
+                Hey, it's better for the planet –and for your eyes– if we keep the lights off. Thanks!
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            )}
+          </div>
+        </div>
       </div>
-    </motion.nav>
+    </header>
   );
 }
