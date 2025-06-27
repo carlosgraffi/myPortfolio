@@ -11,7 +11,13 @@ export default function Header() {
         <span className="flex gap-2 text-lg md:text-xl text-gray-300 leading-none">
           <p className="line-through">I'm a passionate designer</p>
         </span>
-        <RotatingText />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+        >
+          <RotatingText />
+        </motion.div>
         {/* Description */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
