@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Award, Quote, Star } from 'lucide-react';
+import { Award, Mic, Quote, Star } from 'lucide-react';
 
 interface Note {
   type: 'note' | 'accolade' | 'recognition';
@@ -15,26 +15,36 @@ interface Note {
 
 const notes: Note[] = [
   {
+    type: 'note',
+    title: 'Speaker at "CCI25 – Conferencia Climática Internacional 2025"',
+    description: 'Guest speaker and panelist at "Artificial Intelligence (AI): Challenges and Opportunities for AI and City-led Climate Action"',
+    source: 'Global Covenant of Mayors, ICLEI and Córdoba Government',
+    year: '2025',
+    icon: <Mic className="w-5 h-5" />
+  },
+  {
     type: 'accolade',
-    title: 'Climate Tech Innovation Award',
-    description: 'Recognized for outstanding contribution to climate technology through CityCatalyst platform',
-    source: 'Open Earth Foundation',
-    year: '2024',
+    title: 'Winner at Córdoba Climate Hackaton',
+    description: 'Won 1 out of 2 money prizes to develop a local resilience project in collaboration with local schools',
+    source: 'Córdoba Municipality',
+    year: '2025',
     icon: <Award className="w-5 h-5" />
   },
   {
     type: 'recognition',
-    title: 'Featured in Climate Storytelling Workshop',
-    description: 'Rediseñar essay featured as case study in environmental education',
-    source: 'Climate Education Network',
-    year: '2024',
+    title: 'CityCatalyst – Selected Project at LIFT Data',
+    description: 'CityCatalyst got drafted as one of the projects selected to participate of LIFT Data Lab 2025',
+    source: 'LIFT Data Brazil',
+    year: '2025',
     icon: <Star className="w-5 h-5" />
   },
   {
-    type: 'note',
-    title: 'Design Philosophy',
-    description: 'Believes in designing systems that serve both people and planet, with emphasis on accessibility and impact over aesthetics',
-    icon: <Quote className="w-5 h-5" />
+    type: 'recognition',
+    title: 'Local Leader @ Interaction Design Foundation',
+    description: 'Invited to be the local community leader at Córdoba IxDF Chapter',
+    source: 'IxDF – Interaction Design Foundation',
+    year: '2024 – Present',
+    icon: <Star className="w-5 h-5" />
   }
 ];
 
