@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${thunder.variable} ${thunderFine.variable} ${tostada.variable} ${rethink.variable} antialiased`}
+        className={`${thunder.variable} ${thunderFine.variable} ${thunderLight.variable} ${tostada.variable} ${rethink.variable} antialiased`}
         suppressHydrationWarning={true}
       >
         <QueryProvider>
