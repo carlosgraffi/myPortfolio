@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Instagram, BookOpen, Mail, Slack } from "lucide-react";
 import ProjectsSection from "@/components/ProjectsSection";
 import NotesSection from "@/components/NotesSection";
+import CurrentlySection from "@/components/CurrentlySection";
 
 export default function Home() {
   return (
@@ -63,6 +64,7 @@ export default function Home() {
 
         <ProjectsSection />
         <NotesSection />
+        <CurrentlySection />
         <BlogSection />
 
         {/* Contact Section */}
