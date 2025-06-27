@@ -1,4 +1,3 @@
-
 'use client';
 
 import Topbar from "@/components/Topbar";
@@ -8,6 +7,7 @@ import InitiativesSection from "@/components/InitiativesSection";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Instagram, BookOpen, Mail, Slack } from "lucide-react";
 import ProjectsSection from "@/components/ProjectsSection";
+import NotesSection from "@/components/NotesSection";
 
 export default function Home() {
   return (
@@ -62,6 +62,7 @@ export default function Home() {
         </section>
 
         <ProjectsSection />
+        <NotesSection />
         <BlogSection />
 
         {/* Contact Section */}

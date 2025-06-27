@@ -66,7 +66,6 @@ const projects: Project[] = [
       "Became a vehicle to test new ideas and formats beyond client work"
     ]
   },
-  
   {
     id: '3',
     slug: 'rapid-climate-risk-assessment',
