@@ -5,8 +5,8 @@ import RotatingText from "./RotatingText";
 
 export default function Header() {
   return (
-    <header className="relative py-12 md:py-16 lg:py-20" role="banner">
-      <div className="flex flex-col items-start justify-center min-h-[40vh] md:min-h-[50vh]">
+    <header className="max-w-3xl mx-auto relative py-12 md:py-16 lg:py-20" role="banner">
+      <div className="flex flex-col max-w-3xl items-start justify-center min-h-[40vh] md:min-h-[50vh]">
         {/* Main heading */}
         <span className="flex gap-2 text-lg md:text-xl text-gray-300 leading-none">
           <p className="line-through">I'm a passionate designer</p>

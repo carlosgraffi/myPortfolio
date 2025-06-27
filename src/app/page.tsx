@@ -61,10 +61,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        
+        <CurrentlySection />
         <ProjectsSection />
         <NotesSection />
-        <CurrentlySection />
         <BlogSection />
 
         {/* Contact Section */}
