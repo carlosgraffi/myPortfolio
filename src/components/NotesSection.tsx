@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Award, Mic, Quote, Star } from 'lucide-react';
+import { Award, Quote, Star, Mic } from 'lucide-react';
 
 interface Note {
   type: 'note' | 'accolade' | 'recognition';
@@ -48,16 +48,7 @@ const notes: Note[] = [
   }
 ];
 
-const getIconForType = (type: string) => {
-  switch (type) {
-    case 'accolade':
-      return <Award className="w-5 h-5 text-yellow-400" />;
-    case 'recognition':
-      return <Star className="w-5 h-5 text-blue-400" />;
-    default:
-      return <Quote className="w-5 h-5 text-green-400" />;
-  }
-};
+
 
 export default function NotesSection() {
   return (
@@ -75,7 +66,7 @@ export default function NotesSection() {
         Notes & Accolades
       </motion.h2>
       
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="max-w-3xl mx-auto space-y-12">
         {notes.map((note, index) => (
           <motion.div
             key={index}
@@ -83,35 +74,29 @@ export default function NotesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="border border-gray-700 rounded-lg p-6 hover:border-gray-600 transition-colors duration-300"
+            className="border-b border-gray-800 pb-8 last:border-b-0"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 mt-1">
-                {note.icon || getIconForType(note.type)}
+            <div className="space-y-3">
+              <div className="flex items-start justify-between">
+                <h3 className="text-base font-medium text-white max-w-2xl">
+                  {note.title}
+                </h3>
+                {note.year && (
+                  <span className="text-sm text-gray-500 flex-shrink-0">
+                    {note.year}
+                  </span>
+                )}
               </div>
               
-              <div className="flex-1">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-white">
-                    {note.title}
-                  </h3>
-                  
-                  <div className="flex items-center gap-3 text-sm text-gray-400 mt-1 sm:mt-0">
-                    {note.source && (
-                      <span>{note.source}</span>
-                    )}
-                    {note.year && (
-                      <span className="bg-gray-800 px-2 py-1 rounded">
-                        {note.year}
-                      </span>
-                    )}
-                  </div>
-                </div>
-                
-                <p className="text-gray-300 leading-relaxed">
-                  {note.description}
+              <p className="text-sm text-gray-400 leading-relaxed">
+                {note.description}
+              </p>
+              
+              {note.source && (
+                <p className="text-xs text-gray-600">
+                  {note.source}
                 </p>
-              </div>
+              )}
             </div>
           </motion.div>
         ))}
