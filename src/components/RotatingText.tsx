@@ -64,7 +64,7 @@ export default function RotatingText() {
     >
       <div className="flex items-baseline">
         <span
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunderLight uppercase mr-1 sm:mr-2 leading-[4rem] transition-all"
+          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunderLight uppercase mr-1 sm:mr-2 leading-[4rem] sm:leading-[5rem] md:leading-[6rem] lg:leading-[8rem] xl:leading-[8rem] transition-all"
           aria-hidden="true"
         >
           I
@@ -81,7 +81,7 @@ export default function RotatingText() {
               animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
               exit={prefersReducedMotion ? {} : { opacity: 0, y: -20 }}
               transition={{ duration: 0.85 }}
-              className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunder leading-[4rem] inline-block"
+              className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunder leading-[4rem] sm:leading-[5rem] md:leading-[6rem] lg:leading-[8rem] xl:leading-[8rem] inline-block"
             >
               {words[index]}
             </motion.span>
@@ -89,7 +89,7 @@ export default function RotatingText() {
         </div>
       </div>
       <span
-        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunderLight leading-[4rem] transition-all"
+        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunderLight leading-[4rem] sm:leading-[5rem] md:leading-[6rem] lg:leading-[8rem] xl:leading-[8rem] transition-all"
         aria-hidden="true"
       >
         purposefully
