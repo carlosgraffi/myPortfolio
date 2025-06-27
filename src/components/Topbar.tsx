@@ -23,8 +23,8 @@ export default function Topbar() {
           aria-label="rediseñar - Ir al inicio"
         >
           <h1>
-            <span className="text-lg uppercase font-thunder tracking-normal">
-              CarlosOGraffi
+            <span className="text-2xl uppercase font-thunder tracking-normal">
+              G.
             </span>
           </h1>
         </Link>

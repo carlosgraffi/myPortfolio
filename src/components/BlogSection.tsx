@@ -68,7 +68,7 @@ export default function BlogSection() {
         transition={{ delay: 0.4 }}
         className="text-xl mb-24 text-center"
       >
-        Artículos
+        Articles
       </motion.h2>
       <div 
         className="space-y-24 max-w-2xl mx-auto"
