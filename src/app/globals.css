@@ -11,18 +11,10 @@
   body {
     @apply text-white;
     background-color: #1A1A1A;
-    background-image: 
-      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0),
-      url('/gilles-lambert-mSK5nNsAsLY-unsplash.webp');
-    background-size: 
-      15px 15px,
-      cover;
-    background-position: 
-      0 0,
-      center center;
-    background-repeat: 
-      repeat,
-      no-repeat;
+    background-image: url('/gilles-lambert-mSK5nNsAsLY-unsplash.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
   }
@@ -37,6 +29,20 @@
     background: rgba(26, 26, 26, 0.85);
     pointer-events: none;
     z-index: -1;
+  }
+  
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+    background-size: 15px 15px;
+    background-repeat: repeat;
+    pointer-events: none;
+    z-index: 0;
   }
 }
 
