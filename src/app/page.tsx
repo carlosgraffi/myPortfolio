@@ -31,13 +31,13 @@ export default function Home() {
                 Over the last 10+ years, I've designed, led, and launched products at the intersection of design, technology, and (recently) climate action.
               </p>
               <p className="text-base text-gray-300 leading-relaxed mb-6">
-                My journey as a designer goes back to my teenage years, digitizing old graffitis in Photoshop. Without knowing it, a mindset started growing then: find a purpose, learn how to do it. I became a self-taught designer. Spent a couple of years training and nurturing from different experiences. Now I effort to give something back.
+                My journey as a designer goes back to my teenage years, digitizing old graffitis in Photoshop. Without knowing it, a mindset started growing then: <span className="text-white font-semibold mr-2">find a purpose, learn how to do it.</span>I became a self-taught designer. Spent a couple of years training and nurturing from different experiences: from graphic design, branding and video editing to UX/UI, a splash of frontend development and a lot of doing, doing and doing. I became a jack of all trades, but always looking for making an impact. To meaningfully change.
               </p>
               <p className="text-base text-gray-300 leading-relaxed mb-6">
                 Since 2022, I've been leading product design at the Open Earth Foundation, developing open-source digital tools to accelerate climate action. In 2025, I became Head of Impact, ensuring our tools contribute to real-world emissions reductions and climate strategy implementation across 50+ cities in Latin America.
               </p>              
               <p className="text-base text-gray-300 leading-relaxed mb-6">
-                I now also have my own project ("Rediseñar"), a space where I keep building tools for citizen and climate action against environmental and social crisis in Argentina. My purpose is to collaborate and constantly to share how design goes beyond definitions, users and aesthetics. <span className="text-white font-semibold mr-2">It's a powerful tool for social change.</span>
+                I now also have my own project ("Rediseñar"), a space where I keep building tools for citizen and climate action against environmental and social crisis in Argentina. My purpose is to collaborate and constantly to share how design goes beyond definitions, users and aesthetics. <span className="text-white font-semibold mr-2">It's a powerful tool we have for social change.</span>
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-gray-700">
@@ -71,10 +71,10 @@ export default function Home() {
         <section className="py-16 md:py-24 lg:py-32 border-t border-gray-700" aria-labelledby="contact-title">
           <div className="max-w-2xl mx-auto text-center">
             <h2 id="contact-title" className="text-3xl md:text-4xl font-thunder mb-6">
-              Let's Work Together
+              Let's connect
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Interested in collaborating on climate tech, AI tools, or design projects? Let's connect.
+              Interested in collaborating, creating something together or just want to say hi? Feel free to reach out!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -91,7 +91,7 @@ export default function Home() {
                 className="inline-block bg-transparent text-white border-2 py-3 px-6 font-bold text-sm tracking-wider hover:bg-white hover:text-black hover:rounded-br-2xl hover:rounded-tl-2xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-white/50"
                 aria-label="View LinkedIn profile"
               >
-                LinkedIn
+                My LinkedIn
               </a>
             </div>
           </div>

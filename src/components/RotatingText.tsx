@@ -10,6 +10,15 @@ const words = [
   "think",
   "manage",
   "create",
+  "speak",
+  "write",
+  "teach",
+  "learn",
+  "collaborate",
+  "innovate",
+  "imagine",
+  "connect",
+  "inspire",
 ];
 
 export default function RotatingText() {

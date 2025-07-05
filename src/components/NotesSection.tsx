@@ -18,11 +18,11 @@ const notes: Note[] = [
   {
     type: 'note',
     title: 'Speaker at "CCI25 – Conferencia Climática Internacional 2025"',
-    description: 'Guest speaker and panelist at "Artificial Intelligence (AI): Challenges and Opportunities for AI and City-led Climate Action"',
+    description: 'Guest speaker and panelist at "Artificial Intelligence (AI): Challenges and Opportunities for AI and City-led Climate Action" and pitched at GCoM Innovate4Cities Marketplace',
     source: 'Global Covenant of Mayors, ICLEI and Córdoba Government',
     year: '2025',
     icon: <Mic className="w-4 h-4 text-blue-400" />,
-    noteUrl: 'https://example.com/cci25-conference'
+    noteUrl: 'https://www.linkedin.com/posts/global-covenant-of-mayors-for-climate-energy-gcom_cci25-activity-7346598631732404226-FXXP/'
   },
   {
     type: 'accolade',
