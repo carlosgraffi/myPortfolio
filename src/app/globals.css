@@ -17,6 +17,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
+    filter: invert(1);
   }
   
   body::before {
@@ -26,8 +27,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(26, 26, 26, 0.95);
-    mix-blend-mode: invert;
+    background: rgba(26, 26, 26, 0.3);
     pointer-events: none;
     z-index: -1;
   }
@@ -40,9 +40,9 @@
     width: 100%;
     height: 100%;
     background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
-    background-size: 20px 20px;
+    background-size: 15px 15px;
     background-repeat: repeat;
-    mix-blend-mode: soften-light;
+    mix-blend-mode: soft-light;
     pointer-events: none;
     z-index: 0;
   }
