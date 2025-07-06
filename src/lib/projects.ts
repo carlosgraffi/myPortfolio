@@ -1,3 +1,4 @@
+
 // src/lib/projects.ts
 
 export interface Project {
@@ -28,89 +29,126 @@ const projects: Project[] = [
   {
     id: '1',
     slug: 'citycatalyst',
-    title: "CityCatalyst: accelerating city-wide climate action.",
+    title: "CityCatalyst – Accelerating City-Led Climate Action",
     year: "2023-2025",
     type: "climate-tech",
     organization: "Open Earth Foundation",
     role: "Product Design Lead",
-    description: "An open-source platform that helps cities generate GHG inventories, assess climate risks, and prioritize actions. Reduced inventory drafting time from 6-12 months to under 10 minutes by integrating third-party data sources, AI and a guiding user experience.",
-    longDescription: "Cities are required to track their greenhouse gas emissions, assess climate risks, and build action plans. But most don't have the staff, time, or tools to get it done. The process is slow, manual, and filled with friction, often taking over a year for a single inventory, mostly made with custom cumbersome tools like spreadsheets.\n\nCityCatalyst is an open-source platform that helps cities generate a GHG inventory, assess climate risks, and prioritize actions — all in one place. It's built around speed, usability, and integration with trusted datasets.\n\nI led the design of the entire ecosystem, from sketch to production. I worked closely with environmental data scientists to turn international frameworks into guided workflows. I used Replit and Figma to prototype early tools, tested them directly with city users in Brazil and Argentina, and iterated based on their feedback.\n\nI also helped shape the overall architecture, pushing for modularity so tools like the GHG inventory and the risk assessment could work together or separately. The UX is designed to feel like a conversation, not a form.",
+    description: "CityCatalyst is an open-source ecosystem of digital tools that helps cities generate GHG inventories, assess climate risks, and prioritize climate actions in a fraction of the time typically required.",
+    context: "Cities around the world face pressure to meet climate goals, report emissions, and plan for future risks. But local governments, especially in the Global South, often operate with limited staff, low budgets, and high political turnover. Traditional tools are either too technical, too generic, or too slow.",
+    problem: "Creating a baseline GHG inventory can take 6 to 12 months. Risk assessments are often skipped due to lack of local data. Action plans are long lists with no prioritization. This makes it hard for cities to meet reporting obligations or make informed decisions.",
+    ourTake: "We believed that cities don't need more PDFs — they need working tools. Our approach was to build modular, fast, and usable tools that reduce friction at every step. I focused on designing workflows that guide users, connect to trusted datasets, and deliver clear outputs — in minutes, not months.",
+    process: "I led product and UX design, working closely with climate scientists, data engineers, and city stakeholders. I prototyped directly in Replit, using AI tools to generate components and structure logic. We tested early versions in cities in Brazil, Chile, and Argentina, iterated based on real user feedback, and scaled the tools as part of the CityCatalyst platform.",
     duration: "2+ years",
     impact: "50+ Brazilian cities",
     technologies: ['React', 'TypeScript', 'Data Visualization', 'Replit', 'Figma'],
     projectUrl: "https://citycatalyst.openearth.org",
     tags: ['climate', 'cities', 'data-visualization', 'product-design'],
     outcomes: [
-      "Piloted in 50+ Brazilian cities in 2024",
-      "Reduced GHG inventory drafting time from 6–12 months to under 10 minutes",
-      "Used by consultants and local governments without prior training",
-      "Supported national reporting to GCoM and UNFCCC",
-      "Became the foundation for a broader climate planning suite"
+      "Used in 50+ Brazilian cities and expanding across Latin America",
+      "Reduced inventory creation from 6+ months to under 10 minutes",
+      "Helped cities generate data for national reports (GCoM, UNFCCC)",
+      "Became the entry point for broader climate planning efforts"
     ]
   },
   {
     id: '2',
-    slug: 'redisenar-community',
-    title: "Rediseñar: A Community to Rethink How We Design Everything",
-    year: "2024-Present",
-    type: "community",
-    organization: "Independent",
-    role: "Founder & Editor",
-    description: "A platform and community exploring how we can redesign systems, habits, and imaginaries for a livable future. Raw, simple, and provocative climate communications.",
-    longDescription: "Design conversations are often disconnected from climate reality. There's little space to question how products, services, and narratives are shaping a planet in crisis.\n\nI created Rediseñar, a platform and community to explore how we can redesign systems, habits, and imaginaries for a livable future.\n\nI started by writing longform essays blending design, environment, and culture — shared via Substack and Instagram. I organized informal meetups in Córdoba and distributed posters and stickers with climate messages.\n\nI kept it small but consistent, focusing on resonance over reach. I rejected the polished, brand-driven style of most climate comms in favor of something raw, simple, and provocative.",
-    duration: "1+ year",
-    impact: "600+ community members",
-    technologies: ['Community Building', 'Content Strategy', 'Social Media'],
-    projectUrl: "https://redisenar.substack.com",
-    tags: ['community', 'design-thinking', 'climate', 'social-impact'],
-    outcomes: [
-      "607 Instagram followers, 86 Substack subscribers (first 3 months)",
-      "One essay featured in a climate storytelling workshop",
-      "Used in education settings by teachers and environmental educators",
-      "Became a vehicle to test new ideas and formats beyond client work"
-    ]
-  },
-  {
-    id: '3',
-    slug: 'rapid-climate-risk-assessment',
-    title: "Rapid Climate Risk Assessment: A Faster Way to Understand What's Coming",
-    year: "2023-2024",
-    type: "climate-tech",
-    organization: "Open Earth Foundation",
-    role: "Product Designer + Project Coordinator + UX Engineer",
-    description: "A web-based tool that generates first-pass risk profiles for cities in under 5 minutes, combining local data, future scenarios, and expert frameworks through a simple interface.",
-    longDescription: "Cities are expected to assess their future climate risks, but existing tools are either too generic or too technical. Many cities skip the process entirely or produce something too shallow to inform decisions.\n\nThis web-based tool generates a first-pass risk profile for a city, combining local data, future scenarios, and expert frameworks — all accessible through a simple interface.\n\nServing as the project’s UX engineer, I vibe-coded the entire front-end on Replit, leveraging AI-agentic tools for rapid scaffolding, component generation, and continuous refactoring. The result is a performant, accessible interface that feels effortless to use.\n\nI collaborated with climate scientists to define a scoring model that balances hazard exposure, vulnerability, and resilience, then translated it into a dual table-and-radar view that provides both high-level snapshots and drill-down detail.\n\nUsers can seamlessly toggle between present, optimistic, and pessimistic futures, and every data point is structured to meet national and international reporting requirements.",
-    duration: "1 year",
-    impact: "Multi-country deployment",
-    technologies: ['Data Visualization', 'Climate Science APIs', 'React', 'GIS'],
-    projectUrl: 'https://citycatalyst-ccra.replit.app/',
-    tags: ['climate', 'risk-assessment', 'data-visualization', 'government-tech'],
-    outcomes: [
-      "Risk profiles generated in under 5 minutes",
-      "Used by non-technical staff in cities with no prior adaptation planning",
-      "Now used as a base input for prioritizing climate actions",
-      "Informs grant applications and national adaptation strategies"
-    ]
-  },
-  {
-    id: '4',
     slug: 'high-impact-actions-prioritizer',
-    title: "High-Impact Actions Prioritizer: Turning Plans into What Actually Matters",
+    title: "High-Impact Actions Prioritizer – From Long Lists to Strategic Plans",
     year: "2023-2024",
     type: "ai-tools",
     organization: "Open Earth Foundation",
     role: "Product Designer",
-    description: "A lightweight tool that ranks climate actions based on their potential impact using expert scoring, local conditions, and AI reasoning to help cities prioritize effectively.",
-    longDescription: "Cities often have dozens of potential climate actions, but lack a way to prioritize them. They don't know which will reduce the most emissions or improve resilience in the most effective way.\n\nThis lightweight tool ranks climate actions based on their potential impact — using a mix of expert scoring, local conditions, and AI reasoning.\n\nWe started by reviewing action libraries from C40, CDP, and national plans. I mapped common decision factors and user behaviors, then prototyped a ranking experience that feels more like a prioritization workshop than a spreadsheet.\n\nI integrated an LLM to help cities generate custom scenarios or justify choices. I designed the interface to be modular and explainable — so users could tweak assumptions and immediately see how the ranking changed.",
+    description: "A tool to help cities rank their climate actions by potential impact, co-benefits, and feasibility — so they can act where it matters most.",
+    context: "Cities often have long lists of proposed actions, but no way to evaluate which ones will deliver the most climate benefit. Staff need to balance emissions reductions, adaptation, cost, and local constraints. Without support, decisions are political or arbitrary.",
+    problem: "Existing prioritization tools are complex, not built for cities, or too rigid. Many cities end up picking actions without understanding their impact or fit.",
+    ourTake: "We designed a flexible tool that adapts to each city's context and priorities. Our approach focused on transparency and speed: let cities input what they know, get rankings, and adjust assumptions on the fly. No black box, no lengthy training.",
+    process: "I mapped common prioritization frameworks and developed a ranking logic informed by expert input and LLM-powered explanations. I designed the interface to show real-time changes in priority rankings and integrated filters for mitigation, adaptation, and co-benefits. Everything was tested in real decision-making sessions with city teams.",
     duration: "1 year",
     impact: "20+ city action plans",
     technologies: ['AI/ML', 'LLMs', 'React', 'Data Analysis'],
     projectUrl: null,
     tags: ['ai', 'climate', 'decision-support', 'prioritization'],
     outcomes: [
-      "Launched as the first module in the CityCatalyst Ecosystem",
-      "Helped generate city-specific action plans in early pilots",
-      "Cut planning time by weeks and improved cross-team decision-making"
+      "Used by over 20 cities in action plan development",
+      "Helped prioritize mitigation vs. adaptation trade-offs",
+      "Improved cross-department coordination and clarity",
+      "Embedded as a module in CityCatalyst"
+    ]
+  },
+  {
+    id: '3',
+    slug: 'rapid-climate-risk-assessment',
+    title: "Rapid Climate Risk Assessment – A Clear Picture of What's Coming",
+    year: "2023-2024",
+    type: "climate-tech",
+    organization: "Open Earth Foundation",
+    role: "Product Designer + Project Coordinator + UX Engineer",
+    description: "A web-based tool to help cities assess their exposure to climate hazards under different future scenarios — in just a few minutes.",
+    context: "Climate risk assessments are required for adaptation planning and funding access, but cities often lack the expertise, time, or data to complete them. The result is either no assessment or generic ones that don't support local decisions.",
+    problem: "Risk assessments are perceived as expensive, technical, and too slow. Existing tools are built for scientists, not for planners. Cities don't have a way to visualize or compare risks over time.",
+    ourTake: "We designed a simple tool that gives cities a first-pass risk profile. Instead of hiding behind models, we exposed the logic and let cities adjust. We focused on usability, adaptability, and alignment with reporting frameworks.",
+    process: "I co-created a scoring model with researchers and translated it into a clean visual interface — including a radar chart, toggleable scenarios (present, optimistic, pessimistic), and a structured risk table. I led user research with city staff to validate terms and flow, and built the tool using Replit with data sourced from national and global datasets.",
+    duration: "1 year",
+    impact: "Multi-country deployment",
+    technologies: ['Data Visualization', 'Climate Science APIs', 'React', 'GIS'],
+    projectUrl: 'https://citycatalyst-ccra.replit.app/',
+    tags: ['climate', 'risk-assessment', 'data-visualization', 'government-tech'],
+    outcomes: [
+      "Cities generated risk assessments in under 5 minutes",
+      "Improved understanding of risks across departments",
+      "Used as input for climate action prioritization",
+      "Adopted by consultants and NGOs for training"
+    ]
+  },
+  {
+    id: '4',
+    slug: 'redisenar-community',
+    title: "Rediseñar – A Space to Rethink Design in the Climate Crisis",
+    year: "2024-Present",
+    type: "community",
+    organization: "Independent",
+    role: "Founder & Editor",
+    description: "Rediseñar is a community and publication that explores how we can redesign habits, narratives, and systems to face the climate crisis with creativity and agency.",
+    context: "Design is everywhere — but most of it supports extractive systems. Climate conversations often ignore the role of design in shaping choices, products, and systems. There's little space for critical, creative, and local design thinking outside academia.",
+    problem: "Designers lack spaces to reflect on their role in climate and connect with others doing meaningful work. The dominant narratives are either paralyzing or overly polished — leaving little room for experimentation or collaboration.",
+    ourTake: "Rediseñar was my way of creating a place to think aloud, build community, and propose new imaginaries. I approached it not as a brand, but as a provocation: What if we redesigned everything?",
+    process: "I launched a Substack with longform essays and visual explorations, created posters and stickers, and hosted informal gatherings in Córdoba. I shared content on Instagram under a minimal, DIY aesthetic. The voice is honest, critical, and local. I treat it as a living lab.",
+    duration: "1+ year",
+    impact: "600+ community members",
+    technologies: ['Community Building', 'Content Strategy', 'Social Media'],
+    projectUrl: "https://redisenar.substack.com",
+    tags: ['community', 'design-thinking', 'climate', 'social-impact'],
+    outcomes: [
+      "Over 600 Instagram followers and 86 newsletter subscribers in 3 months",
+      "Cited in educational workshops and used by local teachers",
+      "Inspired collaborations and events around design and climate",
+      "Serves as a personal and community testing ground for ideas"
+    ]
+  },
+  {
+    id: '5',
+    slug: 'ayudapatagonia',
+    title: "AyudaPatagonia.ar – A Map for Urgent Help During Wildfires",
+    year: "2025",
+    type: "product-design",
+    organization: "Independent",
+    role: "Designer & Developer",
+    description: "A live map of support points for brigades and families affected by the 2025 wildfires in Patagonia — built and deployed in 48 hours.",
+    context: "In early 2025, wildfires devastated parts of Patagonia. Support was fragmented across WhatsApp groups, spreadsheets, and social media posts. Volunteers and citizens didn't know where or how to help.",
+    problem: "There was no single source of reliable, updated information on where help was needed. Misinformation and overload led to delays, wasted efforts, and unsafe conditions.",
+    ourTake: "Instead of adding more noise, I created a simple, focused site that geolocated verified donation points, brigade contacts, and urgent needs — accessible from any device.",
+    process: "Built with Replit, Google Sheets, and open map tiles. I coordinated directly with volunteers and brigades to verify data. I designed the UI for speed, clarity, and offline usability. I shared it through existing networks and let it grow organically.",
+    duration: "48 hours",
+    impact: "40+ brigades and families",
+    technologies: ['React', 'Google Sheets API', 'Maps', 'Rapid Prototyping'],
+    projectUrl: null,
+    tags: ['emergency-response', 'mapping', 'community', 'rapid-deployment'],
+    outcomes: [
+      "Used by 40+ brigades and families",
+      "Shared by NGOs and community networks",
+      "Inspired similar efforts for future local crises",
+      "Proved how fast, simple tools can save time and reduce chaos"
     ]
   }
 ];
