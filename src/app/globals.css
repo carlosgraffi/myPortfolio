@@ -11,24 +11,11 @@
   body {
     @apply text-white;
     background-color: #1A1A1A;
-    position: relative;
-  }
-  
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/gilles-lambert-mSK5nNsAsLY-unsplash.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: invert(1);
-    pointer-events: none;
-    z-index: -2;
+    position: relative;
   }
   
   body::after {
@@ -38,12 +25,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(26, 26, 26, 0.3);
+    background-image: radial-gradient(circle at 1px 1px, rgb(150, 150, 150,0.08) 1px, transparent 0);
+    background-size: 24px 24px;
+    background-repeat: repeat;
+    mix-blend-mode: none;
     pointer-events: none;
-    z-index: -1;
+    z-index: 0;
   }
-  
-  
 }
 
 /* Optional: Add font smoothing */
