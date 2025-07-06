@@ -165,53 +165,160 @@ export default async function ProjectPage({ params }: { params: { slug: string }
           {/* Project Content */}
           <div className="max-w-4xl mx-auto">
             {/* Description */}
-            <section className="mb-12" aria-labelledby="description-heading">
-              <h2 id="description-heading" className="sr-only">Project Description</h2>
+            <section className="mb-16" aria-labelledby="description-heading">
+              <h2 id="description-heading" className="text-3xl font-bold mb-6 text-white">
+                Description
+              </h2>
               <div className="prose prose-lg prose-invert max-w-none">
                 <p className="text-lg text-gray-300 leading-relaxed">
                   {project.description}
                 </p>
-
-                {project.longDescription && (
-                  <div className="mt-8 text-gray-300 leading-relaxed space-y-6">
-                    {project.longDescription.split('\n\n').map((paragraph, i) => {
-                      // Check if this paragraph contains bullet points
-                      if (paragraph.includes('- ')) {
-                        const listItems = paragraph.split('\n- ');
-                        const intro = listItems.shift(); // Get the text before the first bullet
-
-                        return (
-                          <div key={i}>
-                            {intro && <p className="mb-4">{intro}</p>}
-                            <ul className="list-none pl-0 space-y-3">
-                              {listItems.map((item, j) => (
-                                <li key={j} className="flex items-start">
-                                  <span className="text-xl mr-3 text-gray-400">•</span>
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        );
-                      } else {
-                        // Regular paragraph
-                        return (
-                          <p key={i}>
-                            {paragraph}
-                          </p>
-                        );
-                      }
-                    })}
-                  </div>
-                )}
               </div>
             </section>
 
+            {/* The Context */}
+            {(project.context || project.longDescription) && (
+              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="context-heading">
+                <h2 id="context-heading" className="text-3xl font-bold mb-6 text-white">
+                  The Context
+                </h2>
+                <div className="prose prose-lg prose-invert max-w-none">
+                  <div className="text-gray-300 leading-relaxed space-y-6">
+                    {project.context ? (
+                      project.context.split('\n\n').map((paragraph, i) => (
+                        <p key={i}>{paragraph}</p>
+                      ))
+                    ) : (
+                      project.longDescription!.split('\n\n').slice(0, 1).map((paragraph, i) => (
+                        <p key={i}>{paragraph}</p>
+                      ))
+                    )}
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {/* The Problem */}
+            {(project.problem || project.longDescription) && (
+              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="problem-heading">
+                <h2 id="problem-heading" className="text-3xl font-bold mb-6 text-white">
+                  The Problem
+                </h2>
+                <div className="prose prose-lg prose-invert max-w-none">
+                  <div className="text-gray-300 leading-relaxed space-y-6">
+                    {project.problem ? (
+                      project.problem.split('\n\n').map((paragraph, i) => (
+                        <p key={i}>{paragraph}</p>
+                      ))
+                    ) : (
+                      project.longDescription!.split('\n\n').slice(1, 2).map((paragraph, i) => (
+                        <p key={i}>{paragraph}</p>
+                      ))
+                    )}
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {/* Our Take */}
+            {(project.ourTake || project.longDescription) && (
+              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="take-heading">
+                <h2 id="take-heading" className="text-3xl font-bold mb-6 text-white">
+                  Our Take
+                </h2>
+                <div className="prose prose-lg prose-invert max-w-none">
+                  <div className="text-gray-300 leading-relaxed space-y-6">
+                    {project.ourTake ? (
+                      project.ourTake.split('\n\n').map((paragraph, i) => (
+                        <p key={i}>{paragraph}</p>
+                      ))
+                    ) : (
+                      project.longDescription!.split('\n\n').slice(2, 3).map((paragraph, i) => (
+                        <p key={i}>{paragraph}</p>
+                      ))
+                    )}
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {/* The Process */}
+            {(project.process || project.longDescription) && (
+              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="process-heading">
+                <h2 id="process-heading" className="text-3xl font-bold mb-6 text-white">
+                  The Process
+                </h2>
+                <div className="prose prose-lg prose-invert max-w-none">
+                  <div className="text-gray-300 leading-relaxed space-y-6">
+                    {project.process ? (
+                      project.process.split('\n\n').map((paragraph, i) => {
+                        // Check if this paragraph contains bullet points
+                        if (paragraph.includes('- ')) {
+                          const listItems = paragraph.split('\n- ');
+                          const intro = listItems.shift(); // Get the text before the first bullet
+
+                          return (
+                            <div key={i}>
+                              {intro && <p className="mb-4">{intro}</p>}
+                              <ul className="list-none pl-0 space-y-3">
+                                {listItems.map((item, j) => (
+                                  <li key={j} className="flex items-start">
+                                    <span className="text-xl mr-3 text-gray-400">•</span>
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        } else {
+                          // Regular paragraph
+                          return (
+                            <p key={i}>
+                              {paragraph}
+                            </p>
+                          );
+                        }
+                      })
+                    ) : (
+                      project.longDescription!.split('\n\n').slice(3).map((paragraph, i) => {
+                        // Check if this paragraph contains bullet points
+                        if (paragraph.includes('- ')) {
+                          const listItems = paragraph.split('\n- ');
+                          const intro = listItems.shift(); // Get the text before the first bullet
+
+                          return (
+                            <div key={i}>
+                              {intro && <p className="mb-4">{intro}</p>}
+                              <ul className="list-none pl-0 space-y-3">
+                                {listItems.map((item, j) => (
+                                  <li key={j} className="flex items-start">
+                                    <span className="text-xl mr-3 text-gray-400">•</span>
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        } else {
+                          // Regular paragraph
+                          return (
+                            <p key={i}>
+                              {paragraph}
+                            </p>
+                          );
+                        }
+                      })
+                    )}
+                  </div>
+                </div>
+              </section>
+            )}
+
             {/* Outcomes section if available */}
             {project.outcomes && project.outcomes.length > 0 && (
-              <section className="mb-12 border-t border-gray-700 pt-12" aria-labelledby="outcomes-heading">
-                <h2 id="outcomes-heading" className="text-2xl font-bold mb-6">
-                  Key Outcomes
+              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="outcomes-heading">
+                <h2 id="outcomes-heading" className="text-3xl font-bold mb-6 text-white">
+                  The Outcomes
                 </h2>
                 <ul className="list-none pl-0 space-y-4">
                   {project.outcomes.map((outcome, i) => (

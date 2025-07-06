@@ -8,7 +8,11 @@ export interface Project {
   type: 'climate-tech' | 'ai-tools' | 'community' | 'product-design';
   organization: string;
   description: string;
-  longDescription?: string;
+  context?: string;
+  problem?: string;
+  ourTake?: string;
+  process?: string;
+  longDescription?: string; // keeping for backward compatibility
   duration?: string;
   impact?: string;
   technologies?: string[];
