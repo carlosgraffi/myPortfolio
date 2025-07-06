@@ -1,0 +1,122 @@
+CityCatalyst – Accelerating City-Led Climate Action
+
+Description
+CityCatalyst is an open-source ecosystem of digital tools that helps cities generate GHG inventories, assess climate risks, and prioritize climate actions in a fraction of the time typically required.
+
+The Context
+Cities around the world face pressure to meet climate goals, report emissions, and plan for future risks. But local governments, especially in the Global South, often operate with limited staff, low budgets, and high political turnover. Traditional tools are either too technical, too generic, or too slow.
+
+The Problem
+Creating a baseline GHG inventory can take 6 to 12 months. Risk assessments are often skipped due to lack of local data. Action plans are long lists with no prioritization. This makes it hard for cities to meet reporting obligations or make informed decisions.
+
+Our Take
+We believed that cities don’t need more PDFs — they need working tools. Our approach was to build modular, fast, and usable tools that reduce friction at every step. I focused on designing workflows that guide users, connect to trusted datasets, and deliver clear outputs — in minutes, not months.
+
+The Process
+I led product and UX design, working closely with climate scientists, data engineers, and city stakeholders. I prototyped directly in Replit, using AI tools to generate components and structure logic. We tested early versions in cities in Brazil, Chile, and Argentina, iterated based on real user feedback, and scaled the tools as part of the CityCatalyst platform.
+
+The Outcomes
+	•	Used in 50+ Brazilian cities and expanding across Latin America
+	•	Reduced inventory creation from 6+ months to under 10 minutes
+	•	Helped cities generate data for national reports (GCoM, UNFCCC)
+	•	Became the entry point for broader climate planning efforts
+
+⸻
+
+High-Impact Actions Prioritizer – From Long Lists to Strategic Plans
+
+Description
+A tool to help cities rank their climate actions by potential impact, co-benefits, and feasibility — so they can act where it matters most.
+
+The Context
+Cities often have long lists of proposed actions, but no way to evaluate which ones will deliver the most climate benefit. Staff need to balance emissions reductions, adaptation, cost, and local constraints. Without support, decisions are political or arbitrary.
+
+The Problem
+Existing prioritization tools are complex, not built for cities, or too rigid. Many cities end up picking actions without understanding their impact or fit.
+
+Our Take
+We designed a flexible tool that adapts to each city’s context and priorities. Our approach focused on transparency and speed: let cities input what they know, get rankings, and adjust assumptions on the fly. No black box, no lengthy training.
+
+The Process
+I mapped common prioritization frameworks and developed a ranking logic informed by expert input and LLM-powered explanations. I designed the interface to show real-time changes in priority rankings and integrated filters for mitigation, adaptation, and co-benefits. Everything was tested in real decision-making sessions with city teams.
+
+The Outcomes
+	•	Used by over 20 cities in action plan development
+	•	Helped prioritize mitigation vs. adaptation trade-offs
+	•	Improved cross-department coordination and clarity
+	•	Embedded as a module in CityCatalyst
+
+⸻
+
+Rapid Climate Risk Assessment – A Clear Picture of What’s Coming
+
+Description
+A web-based tool to help cities assess their exposure to climate hazards under different future scenarios — in just a few minutes.
+
+The Context
+Climate risk assessments are required for adaptation planning and funding access, but cities often lack the expertise, time, or data to complete them. The result is either no assessment or generic ones that don’t support local decisions.
+
+The Problem
+Risk assessments are perceived as expensive, technical, and too slow. Existing tools are built for scientists, not for planners. Cities don’t have a way to visualize or compare risks over time.
+
+Our Take
+We designed a simple tool that gives cities a first-pass risk profile. Instead of hiding behind models, we exposed the logic and let cities adjust. We focused on usability, adaptability, and alignment with reporting frameworks.
+
+The Process
+I co-created a scoring model with researchers and translated it into a clean visual interface — including a radar chart, toggleable scenarios (present, optimistic, pessimistic), and a structured risk table. I led user research with city staff to validate terms and flow, and built the tool using Replit with data sourced from national and global datasets.
+
+The Outcomes
+	•	Cities generated risk assessments in under 5 minutes
+	•	Improved understanding of risks across departments
+	•	Used as input for climate action prioritization
+	•	Adopted by consultants and NGOs for training
+
+⸻
+
+Rediseñar – A Space to Rethink Design in the Climate Crisis
+
+Description
+Rediseñar is a community and publication that explores how we can redesign habits, narratives, and systems to face the climate crisis with creativity and agency.
+
+The Context
+Design is everywhere — but most of it supports extractive systems. Climate conversations often ignore the role of design in shaping choices, products, and systems. There’s little space for critical, creative, and local design thinking outside academia.
+
+The Problem
+Designers lack spaces to reflect on their role in climate and connect with others doing meaningful work. The dominant narratives are either paralyzing or overly polished — leaving little room for experimentation or collaboration.
+
+Our Take
+Rediseñar was my way of creating a place to think aloud, build community, and propose new imaginaries. I approached it not as a brand, but as a provocation: What if we redesigned everything?
+
+The Process
+I launched a Substack with longform essays and visual explorations, created posters and stickers, and hosted informal gatherings in Córdoba. I shared content on Instagram under a minimal, DIY aesthetic. The voice is honest, critical, and local. I treat it as a living lab.
+
+The Outcomes
+	•	Over 600 Instagram followers and 86 newsletter subscribers in 3 months
+	•	Cited in educational workshops and used by local teachers
+	•	Inspired collaborations and events around design and climate
+	•	Serves as a personal and community testing ground for ideas
+
+⸻
+
+AyudaPatagonia.ar – A Map for Urgent Help During Wildfires
+
+Description
+A live map of support points for brigades and families affected by the 2025 wildfires in Patagonia — built and deployed in 48 hours.
+
+The Context
+In early 2025, wildfires devastated parts of Patagonia. Support was fragmented across WhatsApp groups, spreadsheets, and social media posts. Volunteers and citizens didn’t know where or how to help.
+
+The Problem
+There was no single source of reliable, updated information on where help was needed. Misinformation and overload led to delays, wasted efforts, and unsafe conditions.
+
+Our Take
+Instead of adding more noise, I created a simple, focused site that geolocated verified donation points, brigade contacts, and urgent needs — accessible from any device.
+
+The Process
+Built with Replit, Google Sheets, and open map tiles. I coordinated directly with volunteers and brigades to verify data. I designed the UI for speed, clarity, and offline usability. I shared it through existing networks and let it grow organically.
+
+The Outcomes
+	•	Used by 40+ brigades and families
+	•	Shared by NGOs and community networks
+	•	Inspired similar efforts for future local crises
+	•	Proved how fast, simple tools can save time and reduce chaos
