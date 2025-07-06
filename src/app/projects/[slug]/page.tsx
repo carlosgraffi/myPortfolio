@@ -162,10 +162,34 @@ export default async function ProjectPage({ params }: { params: { slug: string }
             )}
           </div>
 
+          {/* Project Image */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden">
+              {project.imageUrl ? (
+                <img 
+                  src={project.imageUrl} 
+                  alt={`${project.title} project preview`}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                  <div className="text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gray-700 rounded-lg flex items-center justify-center">
+                      <svg className="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                      </svg>
+                    </div>
+                    <p className="text-gray-500 text-sm">{project.title}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
           {/* Project Content */}
           <div className="max-w-4xl mx-auto">
             {/* Description */}
-            <section className="mb-16" aria-labelledby="description-heading">
+            <section className="mb-12" aria-labelledby="description-heading">
               <h2 id="description-heading" className="text-3xl font-bold mb-6 text-white">
                 Description
               </h2>
@@ -178,7 +202,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
 
             {/* The Context */}
             {(project.context || project.longDescription) && (
-              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="context-heading">
+              <section className="mb-12" aria-labelledby="context-heading">
                 <h2 id="context-heading" className="text-3xl font-bold mb-6 text-white">
                   The Context
                 </h2>
@@ -200,7 +224,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
 
             {/* The Problem */}
             {(project.problem || project.longDescription) && (
-              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="problem-heading">
+              <section className="mb-12" aria-labelledby="problem-heading">
                 <h2 id="problem-heading" className="text-3xl font-bold mb-6 text-white">
                   The Problem
                 </h2>
@@ -222,7 +246,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
 
             {/* Our Take */}
             {(project.ourTake || project.longDescription) && (
-              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="take-heading">
+              <section className="mb-12" aria-labelledby="take-heading">
                 <h2 id="take-heading" className="text-3xl font-bold mb-6 text-white">
                   Our Take
                 </h2>
@@ -244,7 +268,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
 
             {/* The Process */}
             {(project.process || project.longDescription) && (
-              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="process-heading">
+              <section className="mb-12" aria-labelledby="process-heading">
                 <h2 id="process-heading" className="text-3xl font-bold mb-6 text-white">
                   The Process
                 </h2>
@@ -316,7 +340,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
 
             {/* Outcomes section if available */}
             {project.outcomes && project.outcomes.length > 0 && (
-              <section className="mb-16 border-t border-gray-700 pt-12" aria-labelledby="outcomes-heading">
+              <section className="mb-12" aria-labelledby="outcomes-heading">
                 <h2 id="outcomes-heading" className="text-3xl font-bold mb-6 text-white">
                   The Outcomes
                 </h2>
@@ -332,7 +356,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
             )}
 
             {/* Project Links */}
-            <section className="border-t border-gray-700 pt-12 pb-20" aria-labelledby="links-heading">
+            <section className="pt-8 pb-20" aria-labelledby="links-heading">
               <h2 id="links-heading" className="text-2xl font-bold mb-6">
                 Explore Project
               </h2>
