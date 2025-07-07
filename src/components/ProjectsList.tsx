@@ -100,7 +100,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   );
 };
 
-export default function ProjectsList({ showAll = false, limit = 3 }: ProjectsListProps) {
+export default function ProjectsList({ showAll = true, limit = 4 }: ProjectsListProps) {
   const projects = getProjects();
   const displayProjects = showAll ? projects : projects.slice(0, limit);
 
