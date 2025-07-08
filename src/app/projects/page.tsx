@@ -42,7 +42,7 @@ export default function ProjectsPage() {
               Projects
             </h1>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Four key projects that showcase my approach to using design and technology 
+              Five key projects that showcase my approach to using design and technology 
               for climate impact. From helping cities track emissions to building communities 
               that rethink how we design everything.
             </p>
@@ -64,7 +64,7 @@ export default function ProjectsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:carlos@redisenar.com"
+                href="mailto:carlos@redisen.ar"
                 className="inline-block bg-white text-black border-2 py-3 px-6 font-bold text-sm tracking-wider hover:bg-white hover:text-black hover:rounded-br-2xl hover:rounded-tl-2xl transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-white/50"
                 aria-label="Send email to Carlos"
               >

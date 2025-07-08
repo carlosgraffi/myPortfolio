@@ -43,6 +43,7 @@ const projects: Project[] = [
     impact: "50+ LATAM cities",
     technologies: ['React', 'TypeScript', 'Data Visualization', 'Replit', 'Figma', 'ML', 'LLMs'],
     projectUrl: "https://citycatalyst.openearth.org",
+    imageUrl: "/img/citycatalyst.webp",
     tags: ['climate', 'cities', 'data-visualization', 'product-design'],
     outcomes: [
       "Used in 50+ Brazilian cities and expanding across Latin America",
@@ -93,6 +94,7 @@ const projects: Project[] = [
     impact: "Multi-country deployment",
     technologies: ['Data Visualization', 'Climate Science APIs', 'React', 'UX Engineering'],
     projectUrl: 'https://citycatalyst-ccra.replit.app/',
+    imageUrl: "/img/ccra.webp",
     tags: ['climate', 'risk-assessment', 'data-visualization', 'government-tech'],
     outcomes: [
       "Integrated open data for 5.570 cities and municipalities",
@@ -118,6 +120,7 @@ const projects: Project[] = [
     impact: "700+ community members",
     technologies: ['Community Building', 'Writing & Content Sharing', 'Personal Project'],
     projectUrl: "https://redisenar.substack.com",
+    imageUrl: "/img/redisenar.webp",
     tags: ['community', 'design-thinking', 'climate', 'social-impact'],
     outcomes: [
       "Over 700 Instagram followers and 86 newsletter subscribers in 3 months",
@@ -139,7 +142,7 @@ const projects: Project[] = [
     ourTake: "Instead of adding more noise, I created a simple, focused site that geolocated verified donation points, brigade contacts, and urgent needs — accessible from any device.",
     process: "Built with Replit, Google Sheets, OpenStreetMap and NASA FIRMs Data. I coordinated directly and indirectly with volunteers and brigades to verify data and contact points. I designed the UI for speed, clarity, and offline usability, integrating tools like MercadoPago for easy money transfers. I shared it through existing networks and let it grow organically. I implemented the entire project in 24 hours 'vibe coding' it using Claude Sonnet, ChatGPT, and Replit.",
     duration: "24 hours",
-    imageUrl: "@src/lib/ayudapatagonia.png",
+    imageUrl: "/img/ayudapatagonia.png",
     impact: "40+ brigades and families",
     technologies: ['Next.js', 'Open APIs', 'Maps', 'Rapid Prototyping'],
     projectUrl: 'ayudapatagonia.ar',

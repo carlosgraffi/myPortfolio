@@ -169,7 +169,7 @@ export default async function ProjectPage({ params }: { params: { slug: string }
                 <img 
                   src={project.imageUrl} 
                   alt={`${project.title} project preview`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-top object-cover"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
