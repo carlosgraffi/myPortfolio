@@ -1,11 +1,7 @@
-'use client';
-
 import Topbar from "@/components/Topbar";
 import Header from "@/components/Header";
 import BlogSection from "@/components/BlogSection";
-import InitiativesSection from "@/components/InitiativesSection";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Instagram, BookOpen, Mail, Slack } from "lucide-react";
 import ProjectsSection from "@/components/ProjectsSection";
 import NotesSection from "@/components/NotesSection";
 import CurrentlySection from "@/components/CurrentlySection";
