@@ -36,7 +36,7 @@ export default function CurrentlySection() {
             <div className="flex-1 space-y-3">
               <div className="flex items-start justify-between">
                 <h3 className="text-lg font-medium text-white">
-                  Head of Impact and Lead Product Designer
+                  Impact Lead and Product Design Manager
                 </h3>
                 <span className="text-sm text-gray-500 flex-shrink-0">
                   2022 – Present

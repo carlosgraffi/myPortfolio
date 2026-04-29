@@ -101,7 +101,7 @@ export default function RotatingText() {
         className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunderLight leading-[4rem] sm:leading-[5rem] md:leading-[6rem] lg:leading-[8rem] xl:leading-[8rem] transition-all"
         aria-hidden="true"
       >
-        purposefully
+        with purpose
       </span>
     </div>
   );
