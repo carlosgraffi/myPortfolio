@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Award, Quote, Star, Mic } from 'lucide-react';
+import { Award, Quote, Star, Mic, BookOpen } from 'lucide-react';
 
 interface Note {
   type: 'note' | 'accolade' | 'recognition';
@@ -12,9 +12,18 @@ interface Note {
   year?: string;
   icon?: React.ReactNode;
   noteUrl?: string;
+  secondaryUrl?: string;
 }
 
 const notes: Note[] = [
+  {
+    type: 'note',
+    title: 'Speaker at United Nations COP30 Belém',
+    description: 'Represented Open Earth Foundation as Negotiations Observer. Presented CityCatalyst as a winning project at IDB Lab House.',
+    source: 'United Nations COP30 / IDB Lab',
+    year: '2025',
+    icon: <Mic className="w-4 h-4 text-blue-400" />,
+  },
   {
     type: 'note',
     title: 'Speaker at "CCI25 – Conferencia Climática Internacional 2025"',
@@ -31,6 +40,16 @@ const notes: Note[] = [
     source: 'Córdoba Municipality',
     year: '2025',
     icon: <Award className="w-4 h-4 text-yellow-400" />
+  },
+  {
+    type: 'recognition',
+    title: 'Teacher – Digital Sustainability Short Program',
+    description: 'Sharing best practices and reflections about sustainable digital design and responsible product building.',
+    source: 'Technology With Purpose Foundation · Santex',
+    year: '2025 – Present',
+    icon: <BookOpen className="w-4 h-4 text-purple-400" />,
+    noteUrl: 'https://technologywithpurpose.org/en/',
+    secondaryUrl: 'https://santexgroup.com',
   },
   {
     type: 'recognition',
@@ -102,7 +121,17 @@ export default function NotesSection() {
                 </p>
                 
                 {note.source && (
-                  note.noteUrl ? (
+                  note.noteUrl && note.secondaryUrl ? (
+                    <div className="flex gap-2 text-xs text-gray-600">
+                      <a href={note.noteUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors duration-200">
+                        Technology With Purpose Foundation
+                      </a>
+                      <span>·</span>
+                      <a href={note.secondaryUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors duration-200">
+                        Santex
+                      </a>
+                    </div>
+                  ) : note.noteUrl ? (
                     <a
                       href={note.noteUrl}
                       target="_blank"
