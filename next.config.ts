@@ -7,20 +7,32 @@ const config: NextConfig = {
   async headers() {
     return [
       {
-        source: '/:all*(svg|jpg|png)',
+        // Static assets are content-addressed — safe to cache for 1 year
+        source: '/_next/static/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'no-cache, no-store, must-revalidate',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
       {
-        source: '/:path*',
+        // Public fonts and images — cache for 7 days
+        source: '/fonts/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'no-cache, no-store, must-revalidate',
+            value: 'public, max-age=604800, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
+        // Public images — cache for 7 days
+        source: '/img/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=604800, stale-while-revalidate=86400',
           },
         ],
       },
