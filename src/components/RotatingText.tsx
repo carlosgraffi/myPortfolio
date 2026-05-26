@@ -73,14 +73,14 @@ export default function RotatingText() {
     >
       <div className="flex items-end">
         <span
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunderLight uppercase mr-1 sm:mr-2 leading-[4rem] sm:leading-[5rem] md:leading-[6rem] lg:leading-[8rem] xl:leading-[8rem]"
+          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunderLight uppercase mr-1 sm:mr-2 leading-[96px] sm:leading-[112px] md:leading-[144px] lg:leading-[192px] xl:leading-[192px]"
           aria-hidden="true"
         >
           I
         </span>
-        {/* Crop window — fixed height = one word slot */}
+        {/* Crop window — height must match word slot leading exactly */}
         <div
-          className="overflow-hidden h-[4rem] sm:h-[5rem] md:h-[6rem] lg:h-[8rem] xl:h-[8rem]"
+          className="overflow-hidden h-[96px] sm:h-[112px] md:h-[144px] lg:h-[192px] xl:h-[192px]"
           role="timer"
           aria-label={`Palabra actual: ${words[index]}`}
           aria-live="polite"
@@ -97,7 +97,7 @@ export default function RotatingText() {
             {words.map((word) => (
               <div
                 key={word}
-                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunder leading-[4rem] sm:leading-[5rem] md:leading-[6rem] lg:leading-[8rem] xl:leading-[8rem]"
+                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunder leading-[96px] sm:leading-[112px] md:leading-[144px] lg:leading-[192px] xl:leading-[192px] whitespace-nowrap"
                 aria-hidden="true"
               >
                 {word}
@@ -107,7 +107,7 @@ export default function RotatingText() {
         </div>
       </div>
       <span
-        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunderLight leading-[4rem] sm:leading-[5rem] md:leading-[6rem] lg:leading-[8rem] xl:leading-[8rem]"
+        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-thunderLight leading-[96px] sm:leading-[112px] md:leading-[144px] lg:leading-[192px] xl:leading-[192px]"
         aria-hidden="true"
       >
         with purpose
