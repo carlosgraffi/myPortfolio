@@ -5,6 +5,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ProjectsSection from "@/components/ProjectsSection";
 import NotesSection from "@/components/NotesSection";
 import CurrentlySection from "@/components/CurrentlySection";
+import Script from "next/script";
 import { getSubstackPosts } from "@/lib/substack";
 
 export default async function Home() {
@@ -116,6 +117,29 @@ export default async function Home() {
               , being more efficient than 95% of websites globally.
             </p>
           </div>
+
+          <div className="flex flex-col items-center gap-6">
+            <div id="wcb" className="carbonbadge wcb-d"></div>
+            <a
+              href="https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fwww.carlosgraffi.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Green hosting verification by The Green Web Foundation"
+            >
+              <img
+                src="https://app.greenweb.org/api/v3/greencheckimage/www.carlosgraffi.com?nocache=true"
+                alt="This website runs on green hosting - verified by thegreenwebfoundation.org"
+                width={200}
+                height={95}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </div>
+          <Script
+            src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
+            strategy="lazyOnload"
+          />
         </section>
       </main>
       <ScrollToTop />
