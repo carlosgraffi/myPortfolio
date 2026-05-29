@@ -5,8 +5,10 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ProjectsSection from "@/components/ProjectsSection";
 import NotesSection from "@/components/NotesSection";
 import CurrentlySection from "@/components/CurrentlySection";
+import { getSubstackPosts } from "@/lib/substack";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getSubstackPosts();
   return (
     <div className="min-h-screen">
       <Topbar />
@@ -61,7 +63,7 @@ export default function Home() {
         <CurrentlySection />
         <ProjectsSection />
         <NotesSection />
-        <BlogSection />
+        <BlogSection posts={posts} />
 
         {/* Contact Section */}
         <section className="py-16 md:py-24 lg:py-32 border-t border-gray-700" aria-labelledby="contact-title">

@@ -9,13 +9,24 @@ interface BlogPostProps {
   link?: string;
 }
 
-export default function BlogPost({ title, author, description, link }: BlogPostProps) {
-  const decodeHtml = (html: string) => {
-    const txt = document.createElement('textarea');
-    txt.innerHTML = html;
-    return txt.value;
-  };
+const NAMED_ENTITIES: { [key: string]: string } = {
+  '&amp;': '&',
+  '&lt;': '<',
+  '&gt;': '>',
+  '&quot;': '"',
+  '&apos;': "'",
+  '&nbsp;': ' ',
+};
 
+// DOM-free so it works during static prerender (no `document`).
+function decodeHtml(html: string): string {
+  return html
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)))
+    .replace(/&[a-z]+;/gi, (match) => NAMED_ENTITIES[match] || match);
+}
+
+export default function BlogPost({ title, author, description, link }: BlogPostProps) {
   const cleanDescription = decodeHtml(description);
   const cleanTitle = decodeHtml(title);
 

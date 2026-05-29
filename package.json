@@ -10,13 +10,11 @@
     "check": "tsc --noEmit"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.66.0",
     "framer-motion": "^12.4.1",
     "lucide-react": "^0.475.0",
     "next": "^15.5.15",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "server": "^0.0.3"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

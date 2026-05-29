@@ -166,10 +166,12 @@ export default async function ProjectPage({ params }: { params: { slug: string }
           <div className="max-w-4xl mx-auto mb-12">
             <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden">
               {project.imageUrl ? (
-                <img 
-                  src={project.imageUrl} 
+                <img
+                  src={project.imageUrl}
                   alt={`${project.title} project preview`}
                   className="w-full h-full object-top object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">

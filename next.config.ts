@@ -1,43 +1,10 @@
 import type { NextConfig } from 'next'
 
 const config: NextConfig = {
-  generateBuildId: async () => {
-    return `build-${Date.now()}`
-  },
-  async headers() {
-    return [
-      {
-        // Static assets are content-addressed — safe to cache for 1 year
-        source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        // Public fonts and images — cache for 7 days
-        source: '/fonts/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=604800, stale-while-revalidate=86400',
-          },
-        ],
-      },
-      {
-        // Public images — cache for 7 days
-        source: '/img/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=604800, stale-while-revalidate=86400',
-          },
-        ],
-      },
-    ]
-  },
+  // Fully static site — exports plain HTML to out/ (no server runtime).
+  // Cache headers live in public/_headers (served by Cloudflare Pages).
+  output: 'export',
+  images: { unoptimized: true },
   webpack(config) {
     config.module.rules.push({
       test: /\.(woff|woff2|eot|ttf|otf)$/i,

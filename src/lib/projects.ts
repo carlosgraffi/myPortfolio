@@ -142,7 +142,7 @@ const projects: Project[] = [
     ourTake: "Instead of adding more noise, I created a simple, focused site that geolocated verified donation points, brigade contacts, and urgent needs — accessible from any device.",
     process: "Built with Replit, Google Sheets, OpenStreetMap and NASA FIRMs Data. I coordinated directly and indirectly with volunteers and brigades to verify data and contact points. I designed the UI for speed, clarity, and offline usability, integrating tools like MercadoPago for easy money transfers. I shared it through existing networks and let it grow organically. I implemented the entire project in 24 hours 'vibe coding' it using Claude Sonnet, ChatGPT, and Replit.",
     duration: "24 hours",
-    imageUrl: "/img/ayudapatagonia.png",
+    imageUrl: "/img/ayudapatagonia.webp",
     impact: "40+ brigades and families",
     technologies: ['Next.js', 'Open APIs', 'Maps', 'Rapid Prototyping'],
     projectUrl: 'ayudapatagonia.ar',

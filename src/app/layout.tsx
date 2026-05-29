@@ -1,34 +1,33 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import QueryProvider from "@/components/QueryProvider";
 
 const thunder = localFont({
-  src: "../../public/fonts/right-grotesk/RightGrotesk-Black.otf",
+  src: "../../public/fonts/right-grotesk/RightGrotesk-Black.woff2",
   variable: "--font-thunder",
   weight: "900",
 });
 
 const thunderFine = localFont({
-  src: "../../public/fonts/right-grotesk/RightGrotesk-Fine.otf",
+  src: "../../public/fonts/right-grotesk/RightGrotesk-Fine.woff2",
   variable: "--font-thunder-fine",
   weight: "300",
 });
 
 const thunderLight = localFont({
-  src: "../../public/fonts/right-grotesk/RightGrotesk-Light.otf",
+  src: "../../public/fonts/right-grotesk/RightGrotesk-Light.woff2",
   variable: "--font-thunder-light",
   weight: "200",
 });
 
 const tostada = localFont({
-  src: "../../public/fonts/TOSTADA.ttf",
+  src: "../../public/fonts/TOSTADA.woff2",
   variable: "--font-tostada",
   weight: "400",
 });
 
 const rethink = localFont({
-  src: "../../public/fonts/RethinkSans-Regular.ttf",
+  src: "../../public/fonts/RethinkSans-Regular.woff2",
   variable: "--font-rethink",
   weight: "400",
 });
@@ -49,9 +48,7 @@ export default function RootLayout({
         className={`${thunder.variable} ${thunderFine.variable} ${thunderLight.variable} ${tostada.variable} ${rethink.variable} antialiased`}
         suppressHydrationWarning={true}
       >
-        <QueryProvider>
-          {children}
-        </QueryProvider>
+        {children}
       </body>
     </html>
   );
