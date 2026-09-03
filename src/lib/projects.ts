@@ -40,13 +40,13 @@ const projects: Project[] = [
     ourTake: "You can't know what you don't know. Cities assumed they are limited to local data providers, or that other external data is either expensive or useless. We leveraged our partnerships with global data providers to integrate datasets that we could offer to cities to use. At the same time, to address scenarios where data can still be missing, we turned complex spreadsheets into unified, user friendly and clearer forms for the most used methodologies. Our approach was to build modular, fast, and usable tools that reduce friction at every step. I focused on designing workflows that guide users, connect to trusted datasets, and deliver clear outputs — in minutes, not months.",
     process: "I led product and UX design, working closely with climate scientists, data engineers, and city stakeholders. I prototyped directly in Replit, using AI tools to generate components and structure logic. We tested early versions in cities in Brazil, Chile, and Argentina, iterated based on real user feedback, and scaled the tools as part of the CityCatalyst platform.",
     duration: "2+ years",
-    impact: "50+ LATAM cities",
+    impact: "5,500+ LATAM cities",
     technologies: ['React', 'TypeScript', 'Data Visualization', 'Replit', 'Figma', 'ML', 'LLMs'],
     projectUrl: "https://citycatalyst.openearth.org",
     imageUrl: "/img/citycatalyst.webp",
     tags: ['climate', 'cities', 'data-visualization', 'product-design'],
     outcomes: [
-      "Used in 50+ Brazilian cities and expanding across Latin America",
+      "Used in 5,500+ Brazilian cities and expanding across Latin America",
       "Reduced initial inventory data population from 6+ months to under 10 minutes",
       "Helped cities generate data for national and global reports (GCoM, CDP, GPC)",
       "Currently evolving into a new tool for climate consultants and multi-city deployments"
@@ -104,6 +104,55 @@ const projects: Project[] = [
     ]
   },
   {
+    id: '6',
+    slug: 'ambient-ar',
+    title: "ambient.ar – Environmental Design & Innovation Lab",
+    year: "2026-Present",
+    type: "climate-tech",
+    organization: "Own Project",
+    role: "Founder & Designer",
+    description: "ambient.ar is a non-profit, open-source lab that puts technology design at the service of the people and organizations already working for the environment — with one tool for each scale: person, city, and system.",
+    context: "Environmental efforts in Argentina are fragmented: organizations, brigades, and citizens work hard on the ground, but information and tools rarely connect them. You can't take care of what you don't know.",
+    problem: "Those working in the territory know the problem better than anyone — what they lack is technology designed for them. Existing tools are either commercial, closed, or built without the local context in mind.",
+    ourTake: "We don't come to explain the problem or bring 'the solution': our place is to put technology design at the service of existing efforts — as infrastructure to connect them, as a platform to unlock informed climate action, and as a medium to amplify what's already in progress. Everything is open source and replicable by whoever needs it.",
+    process: "I run ambient.ar as a personal, non-profit project built in my own time. It currently hosts a citizen action app in discovery (shaped by ongoing research surveying citizens and environmental organizations across Argentina), MaRiA (a neighborhood-level environmental risk map piloting in Córdoba Capital), and ayuda.ambient.ar — the evolution of AyudaPatagonia — as its first published solution. Co-creation and advisory with territorial organizations is the third, system-level scale.",
+    duration: "Ongoing",
+    impact: "3 tools, 3 scales · Córdoba pilot",
+    technologies: ['Product Design', 'Open Source', 'Open Data', 'Rapid Prototyping', 'Community Research'],
+    projectUrl: "https://ambient.ar",
+    tags: ['climate', 'open-source', 'community', 'civic-tech'],
+    outcomes: [
+      "2 active tools: citizen action app (in research) and MaRiA (in development)",
+      "ayuda.ambient.ar published as the lab's first solution, born from AyudaPatagonia",
+      "Piloting in Córdoba Capital, Argentina, with open and replicable code",
+      "Sustainable web: A+ on WebsiteCarbon, no trackers, no cookies, green hosting"
+    ]
+  },
+  {
+    id: '7',
+    slug: 'maria-mapa-riesgos-ambientales',
+    title: "MaRiA – Mapa de Riesgos Ambientales",
+    year: "2026",
+    type: "climate-tech",
+    organization: "ambient.ar",
+    role: "Creator & UX Engineer",
+    description: "A neighborhood-by-neighborhood climate risk map, built with citizen reports and open data on top of the IPCC risk framework. The first pilot maps heat-wave risk perception in Córdoba Capital, Argentina.",
+    context: "Climate risk data usually stops at the city level. But risk is lived at the neighborhood scale: a heat wave doesn't hit every barrio the same way, and official data rarely captures how people actually experience it.",
+    problem: "There is no accessible, local view of environmental risk that combines what the data says with what neighbors perceive. Without it, citizens and local governments can't prioritize where to act first.",
+    ourTake: "MaRiA combines citizen reports with open data from the city, structured on the IPCC risk framework, to build a risk map barrio by barrio. Open source, so any city can replicate it.",
+    process: "I'm designing and building MaRiA within ambient.ar, starting with a private pre-beta focused on heat waves in Córdoba Capital. Citizen risk perception reports are combined with open datasets from the city, and the prototype is being validated with local users before opening access.",
+    duration: "In development",
+    impact: "Córdoba Capital pilot",
+    technologies: ['Maps', 'Open Data', 'Data Visualization', 'IPCC Risk Framework', 'Open Source'],
+    projectUrl: "https://ambient.ar",
+    tags: ['climate', 'risk-assessment', 'mapping', 'civic-tech'],
+    outcomes: [
+      "First neighborhood-level environmental risk map in the lab, in private pre-beta",
+      "Combines citizen risk perception reports with open city data",
+      "Built on the IPCC risk framework, open source and replicable by other cities"
+    ]
+  },
+  {
     id: '4',
     slug: 'redisenar-community',
     title: "Rediseñar – A Community about Design, Tech and Climate",
@@ -136,7 +185,7 @@ const projects: Project[] = [
     type: "product-design",
     organization: "Own Project",
     role: "Creator & UX Engineer",
-    description: "A live map of support points for brigades and families affected by the 2025 wildfires in Patagonia. Built and deployed in 24 hours.",
+    description: "A live map of support points for brigades and families affected by the 2025 wildfires in Patagonia. Built and deployed in 24 hours. Now evolving as ayuda.ambient.ar, the first published solution of the ambient.ar lab.",
     context: "In early 2025, wildfires devastated parts of Patagonia. Support was fragmented across WhatsApp groups, spreadsheets, and social media posts. Volunteers and citizens didn't know where or how to help.",
     problem: "There was no single source of reliable, updated information on where help was needed. Misinformation and overload led to delays, wasted efforts, and unsafe conditions.",
     ourTake: "Instead of adding more noise, I created a simple, focused site that geolocated verified donation points, brigade contacts, and urgent needs — accessible from any device.",
@@ -151,7 +200,8 @@ const projects: Project[] = [
       "Used by 40+ brigades and families",
       "Had a traffic of 5000+ people per day",
       "Shared by NGOs and community networks",
-      "Proved how fast, simple tools can save time and reduce chaos"
+      "Proved how fast, simple tools can save time and reduce chaos",
+      "Joined the ambient.ar lab as ayuda.ambient.ar, its first published solution, with a new version in development for the next wildfire season"
     ]
   }
 ];

@@ -33,7 +33,7 @@ export default async function Home() {
                 My journey as a designer goes back to my teenage years, digitizing old graffitis in Photoshop. Without knowing it, a mindset started growing then: <span className="text-white font-semibold mr-2">find a purpose, learn how to do it.</span>I became a self-taught designer. Spent a couple of years training and nurturing from different experiences: from graphic design, branding and video editing to UX/UI, a splash of frontend development and a lot of doing, doing and doing. I became a jack of all trades, but always looking for making an impact. To meaningfully change.
               </p>
               <p className="text-base text-gray-300 leading-relaxed mb-6">
-                Since 2022, I've been leading product design at the Open Earth Foundation, developing open-source digital tools to accelerate climate action. In 2025, I became Head of Impact, ensuring our tools contribute to real-world emissions reductions and climate strategy implementation across 50+ cities in Latin America.
+                Since 2022, I've been leading product design at the Open Earth Foundation, developing open-source digital tools to accelerate climate action. In 2025, I became Head of Impact, ensuring our tools contribute to real-world emissions reductions and climate strategy implementation across 5,500+ cities in Latin America.
               </p>              
               <p className="text-base text-gray-300 leading-relaxed mb-6">
                 I now also have my own project ("Rediseñar"), a space where I keep building tools for citizen and climate action against environmental and social crisis in Argentina. My purpose is to collaborate and constantly to share how design goes beyond definitions, users and aesthetics. <span className="text-white font-semibold mr-2">It's a powerful tool we have for social change.</span>
@@ -45,15 +45,15 @@ export default async function Home() {
                   <div className="text-sm text-gray-400">Years designing</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">50+</div>
+                  <div className="text-2xl font-bold text-white">5,500+</div>
                   <div className="text-sm text-gray-400">Cities served</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">5</div>
+                  <div className="text-2xl font-bold text-white">10+</div>
                   <div className="text-sm text-gray-400">Climate tools launched</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">$3M+</div>
+                  <div className="text-2xl font-bold text-white">$7M+</div>
                   <div className="text-sm text-gray-400">Won in grants</div>
                 </div>
               </div>
